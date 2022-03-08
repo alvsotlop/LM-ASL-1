@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCISE 1</title>
+
+    <head>
+        <body>
+            <!--Encabezados - Headings-->
+            <h1>THE LARGEST</h1>
+            <H2>the smallest</H2>
+            <P>
+                FIRST PARAGRAPH
+            </P>
+            <P>
+                SECOND PARAGRAPH
+            </P>
+            
+            <p>
+            <blockquote>
+                There are here a few different lists about my surnames. 
+                Now you can see differents styles in the lists.
+                The surnames are: SOTO, LÓPEZ, RODRÍGUEZ, LARIOS. Hope you enjoy the lists!
+            </blockquote>
+            </p>   
+
+
+            <ul style="list-style-type: circle;">
+                Name or surname
+                <li>SOTO</li>
+                <li>LÓPEZ</li>
+                <li>RODRÍGUEZ</li>
+                <li>LARIOS</li>
+            </ul>
+            <ul style="list-style-type: disc;">
+                Name or surname
+                <li>SOTO</li>
+                <li>LÓPEZ</li>
+                <li>RODRÍGUEZ</li>
+                <li>LARIOS</li>
+            </ul>
+            <ul style="list-style-type: georgian;">
+                <li>SOTO</li>
+                <li>LÓPEZ</li>
+                <li>RODRÍGUEZ</li>
+                <li>LARIOS</li>
+            </ul>
+
+            <ol>
+                Name and surname ordered
+                <li>SOTO</li>
+                <li>LÓPEZ</li>
+                <ul style="list-style-type: lower-roman;">
+                    <li>SOTO</li>
+                    <li>LÓPEZ</li>
+                </ul>
+                <li>RODRÍGUEZ</li>
+                <LI>LARIOS</LI>
+                <ul style="list-style-type: square;">
+                    <li>SOTO</li>
+                    <LI>LÓPEZ</LI>
+                    <li>RODRÍGUEZ</li>
+                    <li>LARIOS</li>
+                </ul>
+            </ol>
+
+            <dl>
+                <dt>SOTO</dt>
+                <dd>First part of the name</dd>
+                <dt>LÓPEZ</dt>
+                <DD>Second part of the name</DD>
+                <dt>RODRÍGUEZ</dt>
+                <dd>Third part of the name</dd>
+                <dt>LARIOS</dt>
+                <dd>Fourth part of the name</dd>
+            </dl>
+            
+            
+            
+        
+            
+        </body>
+    </head>
