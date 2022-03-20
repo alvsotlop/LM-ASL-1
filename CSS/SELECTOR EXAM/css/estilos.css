@@ -1,0 +1,29 @@
+* {
+
+}
+h1 {
+    color: green;
+}
+h2 {
+    color: green;
+}
+#tconf {
+    color: green;
+    background-color: yellow;
+}
+div>b {
+    border: 2px solid blue;
+    
+     
+}
+.first {
+    font-size: 100px;
+}
+.second:hover {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: goldenrod;
+}

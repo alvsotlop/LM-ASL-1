@@ -1,0 +1,25 @@
+
+#capa1 {
+    width: 50%;
+}
+#head {
+    color: white;
+    background: black;
+    padding: 10px;
+
+}
+#menu {
+    color: gray;
+    background: gainsboro;
+    padding: 5px 15px; 
+    
+}
+#menu span {
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+}
+#e3 {
+    background: darkgrey;
+    padding: 5px;
+}
