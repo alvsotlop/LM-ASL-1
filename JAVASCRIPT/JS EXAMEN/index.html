@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+    <script type="text/javascript" src="js/funciones.js"></script>
+</head>
+<body>
+    <h1>Cálculo gasolina</h1>
+    <div>
+        Viaje <input type="text" name="viaje" id="viaje" autofocus>
+        <br><br>
+        <label for="km">Km </label>
+        <input type="number" name="km" id="km">
+        <br><br>
+        <label for="precio">Precio </label>
+        <input type="number" name="precio" id="precio">
+        <br><br>
+
+        <input type="button" id="calcular" value="Calcular" onclick="calcular()">
+        <br><br>
+        <span id="resultado"> </span>    
+    </div>
+    <h1>Enlaces</h1>
+    <div>
+        <p id="enlaceuno">www.twitter.es</p>
+        <p id="enlacedos">www.facebook.es</p>
+        <p id="enlacetres">www.iestriana.es</p>
+        <input type="button" id="cambiar" value="cambiar" onclick="cambiar()">
+    </div>
+
+
+
+    <h1>Formulario</h1>
+    <div style="width: 50%; float: left;">
+        <form action="funciones.php" method="get" name="formu" onsubmit=" return validarFormulario()">
+            <label for="texto">texto</label>
+            <input type="text" name="texto" id="texto" 
+                    placeholder="texto" autofocus onblur="validar(this)">
+            <br/>
+            <span id="spnombre" style="color: red;"></span>
+            <br/>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="telefono">        
+            <br><br>
+            <label for="web">web</label>
+            <input type="text" name="web" id="web" 
+                    placeholder="web" autofocus onblur="validar(this)">
+            <br/>
+            <span id="spnombre" style="color: red;"></span>
+            <br/>
+            <div id="checkbox">
+            <input type="checkbox" name="deporte" id="deporte">Deportes 
+            <input type="checkbox" name="cine" id="cine">Cine
+            <input type="checkbox" name="musica" id="musica">Música
+            </div>
+
+            <br/>
+            <input type="submit" value="Enviar">
+
+        </form>
+    </div>
+    <div id="capaerrores" style="width: 50%; float: left;color: red;visibility: hidden;">
+        <h3>Errores</h3>
+        <span id="sperrores"></span>
+    </div>
+    
+</body>
+</html>

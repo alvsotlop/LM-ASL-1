@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+
+    <script  type="text/javascript">
+        $(document).ready(function () {
+            $("div").mouseover(function() {
+            $(this).addClass("colorfondo");
+            if ($(this).hasClass("clase")) {
+                $(this).addClass("color");
+            }
+            });
+
+            $("div").mouseout(function () {
+                $(this).removeClass("colorfondo");
+                if ($(this).hasClass("clase")) {
+                    $(this).removeClass("color");
+                }
+            })
+            //Si fuese ID pondríamos $("id#"), como es class se pone así
+            $("button.unBoton").click(function () {
+                //toggleClass: quita (si la tiene) o pone (si no la tiene) 
+                // la clase css que indicamos en el paréntesis
+                $("div").toggleClass("ocultarmostrar")
+            });
+
+            $("button.otroBoton").click(function () {
+                var estilo = $("span").attr("style");
+                $("div#estiloSpan").text(estilo);
+            });
+
+            $("button#esteBoton").click(function () {
+               $("div#estiloSpan").css("width", "500px");
+            });
+            
+            // El .value es ahora .val
+            $("button#mostrar").click(function () {
+               var seleccionado = $("input:radio:checked").val();
+               $("span#resultado").text(seleccionado);
+               $("#resultado2").val(seleccionado);
+               return false;
+            });
+
+            $("button#activar").click(function () {
+                // .prop para modificar la propiedad: modificar valores
+               $("#resultado3").prop("disabled", false);
+               $("#resultado3").prop("placeholder", "habilitado");
+               return false;
+            });
+
+            $("button#desmarcar").click(function () {
+                $("#chequeo").prop("checked", false);
+                return false;
+            });
+        });
+    </script>
+    <style type="text/css">
+        div {
+            width: 150px;
+            height: 35px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .colorfondo {
+            background-color: gainsboro;
+        }
+        .color {
+            color: gray;
+        }
+        .ocultarmostrar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="unBoton">Mostrar / Ocultar</button><br><br>
+    <div>Capa 1</div>
+    <div class="clase">Capa 2</div>
+    <div>Capa 3</div>
+    <br/>
+    <button class="otroBoton">Ver Estilo</button><br><br>
+    <span style="font-style: italic ;">SPAN</span>
+    <br/>
+    <div id="estiloSpan"></div>
+    <br/>
+    <button id="esteBoton">Añadir Estilo</button>
+    <br><br>
+    <form> 
+        <!-- el name tiene que ser el mismo en todos -->
+        <input type="radio" name="rad" value="Opción 1"/>Opción 1<br><br>
+        <input type="radio" name="rad" value="Opción 2"/>Opción 2<br><br>
+        <input type="radio" name="rad" value="Opción 3"/>Opción 3<br><br>
+        <input type="radio" name="rad" value="Opción 4"/>Opción 4<br><br>
+        <button id="mostrar">Mostrar</button>
+        <span id="resultado"></span><br><br><input type="text" id="resultado2">
+        <button id="activar">Activar</button>
+        <input type="text" placeholder="Texto" disabled="disabled" id="resultado3"/>
+        <br><br>
+        <input type="checkbox" id="chequeo" value="Sí" checked="checked">Sí<br><br>
+        <button id="desmarcar">Desmarcar</button>
+        
+    </form>
+    
+</body>
+</html>
