@@ -57,6 +57,25 @@
                 $("#chequeo").prop("checked", false);
                 return false;
             });
+            
+            $("input#insertar").click(function () {
+               //$("#capa1").html("<p style='font-weight: bold'>TEXTO</p>");
+               $("#capa1").prepend("<p>Al Inicio</p>");
+               $("#capa1").append("<p>Al final</p>");
+               $("#capa1").before("<div>Antes</div>");
+               $("#capa1").after("<div>Después</div>");
+               $("#capa2").text("TEXTO");
+               $("#capa2").replaceWith("OTRO TEXTO");
+           });
+
+           $("input#checkMail").click(function () {
+              if ($(this).is(":checked")) {
+                  $("#capaMail").append("<input type='email' id='myemail'>");
+              }
+              else {
+                  $("#myemail").remove();
+              }
+           });
         });
     </script>
     <style type="text/css">
@@ -106,6 +125,17 @@
         <button id="desmarcar">Desmarcar</button>
         
     </form>
+    <br><br>
     
+    <input type="button" value="Insertar" id="insertar"/>
+    <br/>
+    <div id="capa1"></div>
+    <br/>
+    <div id="capa2"></div>
+    <br><br>
+    <div id="capaMail">
+        <input type="checkbox" id="checkMail">¿E-Mail?
+    </div>
+
 </body>
 </html>

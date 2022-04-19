@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    
+    <script type="text/javascript">
+        /*Confeccionar una página que muestre dos títulos 
+        de primer nivel, al ser presionados cambiar el 
+        color de fuente, fondo y la fuente del texto.
+        */
+        $(document).ready(function () {
+            $("#titulo1").click(function () {
+                $(this).addClass("cambio");
+                });
+            $("#titulo2").click(function () {
+                $(this).addClass("cambio2");
+                });
+        /*Disponer dos listas luego cuando se presione un 
+        botón ocultar todos los li de la primera lista. */
+            $("#botonLista").click(function () {
+                $("#lista li").addClass("ocultar");
+            });
+        /*Confeccionar una página que muestre el empleo del 
+        método text() y pasando al mismo un valor text(valor). 
+        Obtener el texto contenido en un párrafo, Modificar el 
+        texto de un párrafo, Modificar el texto de los 
+        elementos td de una tabla.*/
+            
+            $(".btn").on("click", function () {
+               switch ($(this).attr("id")) {
+                   case "btnAnadir":
+                       $("#tabla3").css("border", "1px solid black")
+                        break;
+                    case "btnRecupera":
+                        alert($("#tabla3").css("border"));
+                        break;
+                    case "btnElimina":
+                        $("#tabla3").css("border", "none");
+                        break;
+                    default:
+                        break;
+               } 
+            });
+            
+        });
+    </script>
+    
+    <style type="text/css">
+        .cambio {
+            color: gray;
+            font-size: larger;
+            background-color: gainsboro;
+        }
+        .cambio2 {
+            color: gainsboro;
+            font-size: larger;
+            background-color: gray;
+        }
+        .ocultar {
+            display: none;
+        }
+       
+        /*Definir una tabla sin el atributo border. Al presionar 
+        un botón añadirle la propiedad border con el valor 1. 
+        Si se presiona otro botón recuperar y mostrar el valor 
+        del atributo border y por último si se presiona otro botón eliminar la propiedad border.*/
+        
+    </style>
+
+</head>
+<body>
+    <h2>JQUERY EXERCISES</h2><br><br>
+    <span>EX 1</span>
+    <h1 id="titulo1">Título 1</h1>
+    <h1 id="titulo2">Título 2</h1><br><br>
+    <span>EX 2</span>
+    <ul id="lista">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <ul id="lista2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <input type="button" value="Ocultar lista" id="botonLista"><br><br>
+    <span>EX 3</span>
+    <input type="button" value="Obtener texto" id="obtenerTexto">
+    <input type="button" value="Cambiar texto" id="cambiarTexto">
+    <input type="button" value="Cambiar tabla" id="cambiarTabla">
+    <p id="parrafo"></p>
+    <table id="tabla">
+        <tr>    
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table><br><br>
+    <span>EX 4</span>
+    <table id="tabla3">
+        <tr>    
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table><br><br>
+    <div id="estiloSpan"></div>
+    <input type="button" value="Añadir propiedad borde" id="btnAnadir" class="btn">
+    <input type="button" value="Recuperar propiedad borde" id="btnRecupera" class="btn">
+    <input type="button" value="Quitar propiedad borde" id="btnElimina" class="btn">
+    <br><br>
+</body>
+</html>
